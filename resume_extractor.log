@@ -1,0 +1,27 @@
+2025-08-01 00:49:04,231 - __main__ - INFO - Found 1 PDF files to process
+2025-08-01 00:49:04,232 - resume_extractor - INFO - Found 1 PDF files to process
+2025-08-01 00:49:04,232 - resume_extractor - INFO - Processing resume: sample_resumes/resume_updated.pdf
+2025-08-01 00:49:04,264 - resume_extractor - INFO - Successfully extracted text from sample_resumes/resume_updated.pdf
+2025-08-01 00:49:04,265 - resume_extractor - INFO - Extraction completed for sample_resumes/resume_updated.pdf
+2025-08-01 00:49:04,265 - resume_extractor - INFO - Data saved to output/extracted_resumes.csv
+2025-08-01 00:49:04,266 - resume_extractor - INFO - Data saved to output/extracted_resumes.json
+2025-08-01 00:50:29,982 - __main__ - INFO - Found 1 PDF files to process
+2025-08-01 00:50:29,982 - resume_extractor - INFO - Found 1 PDF files to process
+2025-08-01 00:50:29,982 - resume_extractor - INFO - Processing resume: sample_resumes/resume_updated.pdf
+2025-08-01 00:50:30,006 - resume_extractor - INFO - Successfully extracted text from sample_resumes/resume_updated.pdf
+2025-08-01 00:50:30,008 - resume_extractor - INFO - Extraction completed for sample_resumes/resume_updated.pdf
+2025-08-01 00:50:30,008 - resume_extractor - INFO - Data saved to output/extracted_resumes.csv
+2025-08-01 00:50:30,008 - resume_extractor - INFO - Data saved to output/extracted_resumes.json
+2025-08-01 00:54:17,261 - __main__ - INFO - Found 3 PDF files to process
+2025-08-01 00:54:17,261 - resume_extractor - INFO - Found 3 PDF files to process
+2025-08-01 00:54:17,261 - resume_extractor - INFO - Processing resume: sample_resumes/Aman kumar resume-1 (1).pdf
+2025-08-01 00:54:17,283 - resume_extractor - INFO - Successfully extracted text from sample_resumes/Aman kumar resume-1 (1).pdf
+2025-08-01 00:54:17,286 - resume_extractor - INFO - Extraction completed for sample_resumes/Aman kumar resume-1 (1).pdf
+2025-08-01 00:54:17,286 - resume_extractor - INFO - Processing resume: sample_resumes/resume_updated.pdf
+2025-08-01 00:54:17,297 - resume_extractor - INFO - Successfully extracted text from sample_resumes/resume_updated.pdf
+2025-08-01 00:54:17,299 - resume_extractor - INFO - Extraction completed for sample_resumes/resume_updated.pdf
+2025-08-01 00:54:17,299 - resume_extractor - INFO - Processing resume: sample_resumes/Resume (5).pdf
+2025-08-01 00:54:17,315 - resume_extractor - INFO - Successfully extracted text from sample_resumes/Resume (5).pdf
+2025-08-01 00:54:17,317 - resume_extractor - INFO - Extraction completed for sample_resumes/Resume (5).pdf
+2025-08-01 00:54:17,318 - resume_extractor - INFO - Data saved to output/extracted_resumes.csv
+2025-08-01 00:54:17,318 - resume_extractor - INFO - Data saved to output/extracted_resumes.json

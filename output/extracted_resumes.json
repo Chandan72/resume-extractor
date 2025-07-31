@@ -1,0 +1,55 @@
+[
+  {
+    "file_name": "Aman kumar resume-1 (1).pdf",
+    "name": null,
+    "email": null,
+    "phone": "(628) 795-8624",
+    "education": [],
+    "skills": [
+      "Css",
+      "Javascript",
+      "Spring",
+      "Aws",
+      "Java",
+      "Express",
+      "Docker",
+      "Kubernetes",
+      "React",
+      "Python",
+      "Html",
+      "Git",
+      "Go"
+    ]
+  },
+  {
+    "file_name": "resume_updated.pdf",
+    "name": null,
+    "email": null,
+    "phone": "(720) 906-2108",
+    "education": [],
+    "skills": [
+      "Deep Learning",
+      "Machine Learning",
+      "C++",
+      "Generative Ai",
+      "Python",
+      "Git",
+      "Go"
+    ]
+  },
+  {
+    "file_name": "Resume (5).pdf",
+    "name": null,
+    "email": null,
+    "phone": "(720) 906-2108",
+    "education": [],
+    "skills": [
+      "Deep Learning",
+      "Machine Learning",
+      "C++",
+      "Generative Ai",
+      "Python",
+      "Go"
+    ]
+  }
+]

@@ -9,8 +9,8 @@ __version__ = "1.0.0"
 __author__ = "Chandan"
 __email__ = "chandan875792@gmail.com"
 
-from .resume_extractor import ResumeExtractor
-from .utils import (
+from resume_extractor import ResumeExtractor
+from utils import (
     clean_text,
     extract_urls,
     extract_linkedin_profile,
