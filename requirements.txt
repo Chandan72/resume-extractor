@@ -1,4 +1,14 @@
+# Core dependencies
 PyMuPDF==1.23.14
 pandas==2.1.4
+
+# Optional dependencies for extended functionality
 python-docx==1.1.0
 openpyxl==3.1.2
+
+# Development dependencies (install with pip install -e .[dev])
+pytest>=7.0
+black>=22.0
+pylint>=2.15
+mypy>=0.991
+isort>=5.0

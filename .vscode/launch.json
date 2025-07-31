@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Resume Extractor",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug Single Resume",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/resume_extractor.py",
+            "console": "integratedTerminal",
+            "args": ["--single", "sample_resumes/resume1.pdf"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug Multiple Resumes",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/resume_extractor.py",
+            "console": "integratedTerminal",
+            "args": ["--folder", "sample_resumes/"],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
