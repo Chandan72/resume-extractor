@@ -1,55 +1,55 @@
 [
   {
     "file_name": "Aman kumar resume-1 (1).pdf",
-    "name": null,
-    "email": null,
+    "name": "Aman Kumar Kolkata",
+    "email": "heyaman329@gmail.com",
     "phone": "(628) 795-8624",
     "education": [],
     "skills": [
-      "Css",
-      "Javascript",
-      "Spring",
-      "Aws",
-      "Java",
-      "Express",
-      "Docker",
-      "Kubernetes",
-      "React",
-      "Python",
       "Html",
-      "Git",
-      "Go"
+      "Css",
+      "Kubernetes",
+      "Docker",
+      "Go",
+      "Express",
+      "Spring",
+      "Python",
+      "Java",
+      "React",
+      "Javascript",
+      "Aws",
+      "Git"
     ]
   },
   {
     "file_name": "resume_updated.pdf",
-    "name": null,
-    "email": null,
+    "name": "Chandan Kolkata",
+    "email": "chandan875792@gmail.com",
     "phone": "(720) 906-2108",
     "education": [],
     "skills": [
+      "Generative Ai",
+      "C++",
+      "Go",
       "Deep Learning",
       "Machine Learning",
-      "C++",
-      "Generative Ai",
       "Python",
-      "Git",
-      "Go"
+      "Git"
     ]
   },
   {
     "file_name": "Resume (5).pdf",
-    "name": null,
-    "email": null,
+    "name": "Data Science Intern",
+    "email": "chandan875792@gmail.com",
     "phone": "(720) 906-2108",
     "education": [],
     "skills": [
+      "Generative Ai",
+      "C++",
+      "Go",
       "Deep Learning",
       "Machine Learning",
-      "C++",
-      "Generative Ai",
-      "Python",
-      "Go"
+      "Python"
     ]
   }
 ]

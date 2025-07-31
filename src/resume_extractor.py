@@ -75,28 +75,33 @@ class ResumeExtractor:
         return text.strip()
     
     def extract_name(self, text: str) -> Optional[str]:
-        """Extract name from resume text (usually first line or after common patterns)."""
+        """Extract name from resume text (improved: looks for the first likely name in the first line, even if mixed with other info)."""
         lines = text.split('\n')
-        
-        # Try first few lines for name
-        for i, line in enumerate(lines[:5]):
-            line = line.strip()
-            
-            # Skip empty lines and common headers
-            if not line or line.lower() in ['resume', 'curriculum vitae', 'cv']:
-                continue
-            
-            # Look for lines that might be names (2-4 words, proper case)
-            words = line.split()
-            if 2 <= len(words) <= 4 and all(word.replace('.', '').isalpha() for word in words):
-                if any(word[0].isupper() for word in words):
-                    return line
-        
+        # Look at the first line only (most resumes have name at the top)
+        if not lines:
+            return None
+        first_line = lines[0]
+        # Remove emails, phones, and common symbols
+        first_line = re.sub(r'\S+@\S+', '', first_line)
+        first_line = re.sub(r'\+?\d[\d\s\-()]+', '', first_line)
+        first_line = re.sub(r'[^A-Za-z .-]', ' ', first_line)
+        # Find the first 2-4 consecutive capitalized words (allowing for middle initials)
+        name_match = re.findall(r'([A-Z][a-zA-Z.-]+(?: [A-Z][a-zA-Z.-]+){1,3})', first_line)
+        if name_match:
+            return name_match[0].strip()
+        # Fallback: look for a likely name in the first 5 lines
+        for line in lines[:5]:
+            words = line.strip().split()
+            if 2 <= len(words) <= 4 and all(word[0].isupper() for word in words if word.isalpha()):
+                return ' '.join(words)
         return None
     
     def extract_email(self, text: str) -> Optional[str]:
-        """Extract email address from text."""
-        emails = re.findall(self.email_pattern, text)
+        """Extract email address from text (improved: remove spaces and fix common OCR issues)."""
+        # Remove spaces and fix common OCR issues
+        cleaned_text = re.sub(r'\s+([@.])', r'\1', text)
+        cleaned_text = re.sub(r'(@gmail)\s*\.\s*com', r'@gmail.com', cleaned_text, flags=re.IGNORECASE)
+        emails = re.findall(self.email_pattern, cleaned_text)
         return emails[0] if emails else None
     
     def extract_phone(self, text: str) -> Optional[str]:
@@ -168,14 +173,20 @@ class ResumeExtractor:
     def extract_resume_data(self, pdf_path: str) -> Dict:
         """Extract all data from a single resume PDF."""
         logger.info(f"Processing resume: {pdf_path}")
-        
+
         # Extract and normalize text
         raw_text = self.extract_text_from_pdf(pdf_path)
         if not raw_text:
             return {"error": "Could not extract text from PDF"}
-        
+
         normalized_text = self.normalize_text(raw_text)
-        
+
+        # Debug: Print the first 20 lines of the extracted text
+        print("\n--- Extracted Text Preview for:", os.path.basename(pdf_path), "---")
+        for i, line in enumerate(normalized_text.split('\n')[:20]):
+            print(f"{i+1:02d}: {line}")
+        print("--- End of Preview ---\n")
+
         # Extract individual fields
         extracted_data = {
             "file_name": os.path.basename(pdf_path),
@@ -185,7 +196,7 @@ class ResumeExtractor:
             "education": self.extract_education(normalized_text),
             "skills": self.extract_skills(normalized_text)
         }
-        
+
         logger.info(f"Extraction completed for {pdf_path}")
         return extracted_data
     
