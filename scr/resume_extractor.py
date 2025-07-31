@@ -5,6 +5,7 @@ import csv
 import os
 from pathlib import Path
 from typing import Dict, List, Optional
+from .utils import format_phone_number
 import logging
 
 # Set up logging
@@ -103,8 +104,7 @@ class ResumeExtractor:
         phones = re.findall(self.phone_pattern, text)
         if phones:
             # Format phone number
-            area, first, last = phones[0]
-            return f"({area}) {first}-{last}"
+            return format_phone_number(''.join(phones[0]))
         return None
     
     def extract_education(self, text: str) -> List[str]:
